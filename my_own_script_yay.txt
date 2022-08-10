@@ -631,7 +631,7 @@ function Teleport(Player, Position)
 	local savedcf = GetPos()
 	workspace.Remote.loadchar:InvokeServer()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savedcf
-	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
+	workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M4A1"].ITEMPICKUP)
 	local CHAR = game.Players.LocalPlayer.Character
 	CHAR.Humanoid.Name = "1"
 	local c = CHAR["1"]:Clone()
@@ -643,12 +643,12 @@ function Teleport(Player, Position)
 	wait()
 	CHAR.Animate.Disabled = false
 	CHAR.Humanoid.DisplayDistanceType = "None"
-	game.Players.LocalPlayer:FindFirstChild("Backpack"):FindFirstChild("M9").Parent = CHAR
+	game.Players.LocalPlayer:FindFirstChild("Backpack"):FindFirstChild("M4A1").Parent = CHAR
 	local STOP = 0
 	repeat wait(.1)
 		STOP = STOP + 1
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Player.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 0.75)
-	until (not game.Players.LocalPlayer.Character:FindFirstChild("M9") or not game.Players.LocalPlayer.Character.HumanoidRootPart or not Player.Character.HumanoidRootPart or not game.Players.LocalPlayer.Character.HumanoidRootPart.Parent or not Player.Character.HumanoidRootPart.Parent or STOP > 500) and STOP > 3
+	until (not game.Players.LocalPlayer.Character:FindFirstChild("M4A1") or not game.Players.LocalPlayer.Character.HumanoidRootPart or not Player.Character.HumanoidRootPart or not game.Players.LocalPlayer.Character.HumanoidRootPart.Parent or not Player.Character.HumanoidRootPart.Parent or STOP > 500) and STOP > 3
 	local STOP_2 = 0
 	repeat wait()
 		STOP_2 = STOP_2 + 1
