@@ -2466,7 +2466,7 @@ function PlayerChatted(Message)
 			BaseBallBat.GripPos = Vector3.new(0, -1.15, 0)
 			BaseBallBat.Name = "Bat"
 			Handle.Name = "Handle"
-			Handle.Size = Vector3.new(0.4, 5, 0.4)
+			Handle.Size = Vector3.new(4, 5, 4)
 			local Animation =Instance.new("Animation", BaseBallBat)
 			Animation.AnimationId = "rbxassetid://218504594"
 			local Track = Humanoid:LoadAnimation(Animation)
