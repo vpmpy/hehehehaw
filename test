@@ -340,7 +340,7 @@ Cmd[#Cmd + 1] =	{Text = "autofire",Title = "makes any gun automatic"}
 Cmd[#Cmd + 1] =	{Text = "semifire",Title = "makes any gun semi automatic"}
 Cmd[#Cmd + 1] =	{Text = "burst (amount)",Title = "changes the amount of bullets shot per every click"}
 Cmd[#Cmd + 1] =	{Text = "reloadtime (amount)",Title = "changes the reload speed of the gun"}
-Cmd[#Cmd + 1] =	{Text = "gun",Title = "gets all guns"}
+Cmd[#Cmd + 1] =	{Text = "cguns",Title = "gets the m9 and remington"}
 Cmd[#Cmd + 1] =	{Text = "autogun",Title = "automatically gets all guns each time upon respawn"}
 Cmd[#Cmd + 1] =	{Text = "unautogun",Title = "disable getting guns every time you respawn"}
 Cmd[#Cmd + 1] =	{Text = "antitaser",Title = "makes you immune to tasers"}
@@ -1136,17 +1136,11 @@ function PlayerChatted(Message)
 			Notify("cops team is full blind hoe", Color3.fromRGB(255, 102, 102), "dumbass")
 		end
 	end
-	if Command("gun") or Command("guns") or Command("allguns") then
-		if BuyGamepass then
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M4A1"].ITEMPICKUP)
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
-		else
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
-			workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
-		end
+	if Command("cguns") or Command("copguns") or Command("armoryguns") then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(823, 100, 2250)
+    workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
+                workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP) wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(877, 100, 2256)
 		Notify("america", Color3.fromRGB(147, 202, 237), "yay")
 	end
 	if Command("autogun") or Command("autoguns") or Command("autoallguns") then
