@@ -1137,6 +1137,7 @@ function PlayerChatted(Message)
 		end
 	end
 	if Command("gunsies") or Command("guns") or Command("allguns") then
+		States.SavedCFrame = GetPos()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(823, 100, 2250)
                 workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
@@ -1145,7 +1146,7 @@ function PlayerChatted(Message)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP) wait(0.05)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP) wait(0.05)
 		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP) wait(0.05)
-    		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(877, 100, 2256)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = States.SavedCFrame
 		Notify("america", Color3.fromRGB(147, 202, 237), "yay")
 	end
 	if Command("autogun") or Command("autoguns") or Command("autoallguns") then
