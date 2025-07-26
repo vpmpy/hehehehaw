@@ -1136,11 +1136,12 @@ function PlayerChatted(Message)
 			Notify("cops team is full blind hoe", Color3.fromRGB(255, 102, 102), "dumbass")
 		end
 	end
-	if Command("cguns") or Command("copguns") or Command("armoryguns") then
+	if Command("gunsies") or Command("guns") or Command("allguns") then
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(823, 100, 2250)
-    workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["M9"].ITEMPICKUP)
-                workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP) wait(1)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(877, 100, 2256)
+                workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943, 95, 2055)
+		workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP)
+    		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(877, 100, 2256)
 		Notify("america", Color3.fromRGB(147, 202, 237), "yay")
 	end
 	if Command("autogun") or Command("autoguns") or Command("autoallguns") then
